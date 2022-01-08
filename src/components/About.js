@@ -49,8 +49,8 @@ const StyledAbout = styled.div`
     .txt_wrapper img {
       border: 5px solid #66fcf1;
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
     }
     .txt_wrapper p {
       font-size: 1rem;
@@ -65,6 +65,10 @@ const StyledAbout = styled.div`
     }
     .txt_wrapper p {
       font-size: 1.2rem;
+    }
+    .txt_wrapper img {
+      width: 250px;
+      height: 250px;
     }
   }
   @media screen and (min-width: 768px) {
