@@ -11,7 +11,7 @@ export default function Project(props) {
   };
 
   const handleExit = (e) => {
-    setIsActive(!isActive);
+    setIsActive(false);
     e.stopPropagation();
   };
 

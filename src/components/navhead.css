@@ -1,6 +1,6 @@
 @media screen and (min-width: 1px) {
   #navHead {
-    height: 20vh;
+    height: 15vh;
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
@@ -62,9 +62,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  #navHead {
+  /* #navHead {
     height: 15vh;
-  }
+  } */
   .title {
     width: 40%;
   }
