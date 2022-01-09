@@ -62,9 +62,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* #navHead {
-    height: 15vh;
-  } */
   .title {
     width: 40%;
   }
