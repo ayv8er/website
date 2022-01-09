@@ -111,3 +111,18 @@
     font-size: 2rem;
   }
 }
+
+@media screen and (min-height: 1px) {
+  .title {
+    line-height: 1.2;
+  }
+  .title h1 {
+    font-size: 1.6rem;
+  }
+  .title h2 {
+    font-size: 1rem;
+  }
+  .navLinks a {
+    font-size: 1.6rem;
+  }
+}
