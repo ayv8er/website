@@ -5,7 +5,7 @@ import img from "../assets/low-poly-grid-haikei.svg";
 export default function Contact() {
   const user = {
     resume:
-      "https://drive.google.com/file/d/1fjMFu40wzvx0f1aG-gEwsiKbCQ9AP1jj/view?usp=sharing",
+      "https://drive.google.com/file/d/1wkwbc4qSYzXkw8nwQ7uPaHYQXlQrl4mo/view?usp=sharing",
   };
 
   return (

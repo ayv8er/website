@@ -17,8 +17,7 @@ export default function Projects() {
     },
     {
       title: "NASA - APOD",
-      description:
-        'Get a new photo from NASA every day. This site uses REACT\'s UI library to create a complex rich user interface. It demonstrates building sometihng that could power the user experience in such a way that is decoupled and unconcerned when and where data is received. As a SPA it further demos my undertanding of the "V" in the MVC (Model, View, Controller) paradigm. The architecture permits small, resusable, pieces of UI that can be easily put together to make this scalable application',
+      description: "Get a new photo from NASA every day.",
       gitHub: "https://github.com/ayv8er/nasadailyphoto",
       deployed_site: "https://nasadailyphoto-phi.vercel.app/",
       card_image: nasaImg,
