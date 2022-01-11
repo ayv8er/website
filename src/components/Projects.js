@@ -12,7 +12,7 @@ export default function Projects() {
       title: "Cryptocurrency Index",
       description: "A live market index of various Cryptocurrencies",
       gitHub: "https://github.com/ayv8er/cryptomarketinfo",
-      deployed_site: "https://cryptomarketinfo-q4ot2umr2-ayv8er.vercel.app/",
+      deployed_site: "https://cryptomarketinfo.vercel.app/",
       card_image: cryptoImg,
     },
     {
