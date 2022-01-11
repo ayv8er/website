@@ -6,12 +6,11 @@
     align-self: center;
     cursor: pointer;
     margin: 5%;
-    box-shadow: 8px 8px 16px var(--secondary_color);
     border-radius: 50%;
   }
 
   .project:hover {
-    opacity: 0.5;
+    box-shadow: 8px 8px 16px var(--secondary_color);
   }
 
   .project .non_img_title,
@@ -38,7 +37,9 @@
     font-size: 1rem;
     color: var(--primary_color);
     background: rgb(0, 0, 0, 0.8);
-    padding: 5px 10px;
+    padding: 3% 6%;
+    border-radius: 50px;
+    font-family: arial;
   }
 
   .active_project {
@@ -165,6 +166,8 @@
   .project {
     width: 250px;
     height: 250px;
+  }
+  .project:hover {
     box-shadow: 10px 10px 20px var(--secondary_color);
   }
 }

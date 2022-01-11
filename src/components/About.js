@@ -56,7 +56,7 @@ const StyledAbout = styled.div`
       font-size: 1rem;
       color: var(--primary_color);
       line-height: 2;
-      font-family: serif;
+      font-family: arial;
     }
   }
   @media screen and (min-width: 600px) {

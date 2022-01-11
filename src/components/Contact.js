@@ -36,18 +36,18 @@ const StyledContact = styled.div`
     align-items: center;
   }
   #resume {
-    padding: 1%;
-    border: 1px solid var(--secondary_color);
+    padding: 3%;
+    border: 5px solid var(--secondary_color);
     justify-self: center;
     align-self: center;
     cursor: pointer;
-    font-family: serif;
-    box-shadow: 10px 10px 20px var(--secondary_color);
+    font-family: arial;
   }
   #resume a {
     color: var(--primary_color);
+    font-size: 2rem;
   }
   #resume:hover {
-    opacity: 0.5;
+    box-shadow: 10px 10px 20px var(--secondary_color);
   }
 `;
