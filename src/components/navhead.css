@@ -1,79 +1,88 @@
+#navHead {
+  height: 15vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  z-index: 10000;
+  background-color: #1f2833;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  color: #66fcf1;
+  margin-left: 5%;
+  line-height: 1;
+}
+.title h1 {
+  font-family: var(--main_font);
+}
+.title h2 {
+  font-family: var(--accent_font);
+}
+.navLinks {
+  display: flex;
+  margin-right: 5%;
+}
+.navLinks a {
+  font-family: var(--accent_font);
+  color: white;
+  margin: 10% 0;
+  padding: 1%;
+}
+.navLinks a:hover {
+  border-bottom: 1px solid #66fcf1;
+}
+
 @media screen and (min-width: 1px) {
-  #navHead {
-    height: 15vh;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-    position: fixed;
-    z-index: 10000;
-    background-color: #1f2833;
-  }
-  .title {
-    display: flex;
-    flex-direction: column;
-    color: #66fcf1;
-    font-weight: bolder;
-    line-height: 1.5;
-  }
   .title h1 {
-    font-size: 1.6rem;
-    font-family: var(--main_font);
+    font-size: 1.2rem;
   }
   .title h2 {
-    font-size: 1rem;
-    font-family: var(--accent_font);
+    font-size: 0.8rem;
   }
   .navLinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .navLinks a {
-    font-family: var(--accent_font);
-    color: white;
     font-size: 1rem;
-    margin: 10% 0;
-    padding: 1%;
   }
   .navLinks a:hover {
     border-bottom: 1px solid #66fcf1;
   }
 }
-@media screen and (min-width: 600px) {
-  .title {
-    display: flex;
-    flex-direction: column;
-    color: #66fcf1;
-    font-weight: bolder;
-  }
+@media screen and (min-width: 375px) {
   .title h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   .title h2 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .navLinks a {
-    font-size: 1.4rem;
-    margin: 8% 0;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .title h1 {
+    font-size: 1.8rem;
+  }
+  .title h2 {
+    font-size: 1.2rem;
+  }
+  .navLinks a {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .title {
-    width: 40%;
-  }
   .title h1 {
     font-size: 2.2rem;
   }
   .title h2 {
     font-size: 1.6rem;
-  }
-  .navLinks {
-    width: 40%;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
   }
   .navLinks a {
     font-size: 1.6rem;
@@ -95,54 +104,33 @@
     line-height: 1.2;
   }
   .title h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
   .title h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .navLinks a {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
-@media screen and (min-height: 300px) and (min-width: 500px) {
+
+@media screen and (min-height: 1px) {
   .title {
     line-height: 1;
-    width: 40%;
-  }
-  .title h1 {
-    font-size: 1.6rem;
-  }
-  .title h2 {
-    font-size: 1rem;
-  }
-  .navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
-  }
-  .navLinks a {
-    font-size: 1.2rem;
   }
 }
-@media screen and (min-height: 414px) and (min-width: 889px) {
+@media screen and (min-height: 375px) {
   .title {
-    line-height: 1;
-    width: 40%;
+    line-height: 1.2;
   }
-  .title h1 {
-    font-size: 1.8rem;
+}
+@media screen and (min-height: 595px) {
+  .title {
+    line-height: 1.4;
   }
-  .title h2 {
-    font-size: 1.2rem;
-  }
-  .navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
-  }
-  .navLinks a {
-    font-size: 1.2rem;
+}
+@media screen and (min-height: 768px) {
+  .title {
+    line-height: 1.5;
   }
 }

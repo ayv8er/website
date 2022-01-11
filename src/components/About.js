@@ -53,7 +53,7 @@ const StyledAbout = styled.div`
       height: 200px;
     }
     .txt_wrapper p {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: var(--primary_color);
       line-height: 2;
       font-family: arial;
@@ -75,6 +75,18 @@ const StyledAbout = styled.div`
     #about {
       flex-direction: row;
       align-content: center;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .txt_wrapper p {
+      font-size: 1.4rem;
+      line-height: 2;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .txt_wrapper p {
+      font-size: 1.8rem;
+      line-height: 2;
     }
   }
 `;
