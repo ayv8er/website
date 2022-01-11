@@ -104,13 +104,13 @@
     font-size: 2rem;
   }
 }
-@media screen and (min-height: 1px) and (min-width: 1px) {
+@media screen and (min-height: 300px) and (min-width: 500px) {
   .title {
     line-height: 1;
     width: 40%;
   }
   .title h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .title h2 {
     font-size: 1rem;
@@ -122,7 +122,7 @@
     width: 40%;
   }
   .navLinks a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-height: 414px) and (min-width: 889px) {
