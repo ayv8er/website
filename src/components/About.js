@@ -59,12 +59,20 @@ const StyledAbout = styled.div`
       font-family: arial;
     }
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 375px) {
     .txt_wrapper {
       padding: 5%;
     }
     .txt_wrapper p {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (min-width: 595px) {
+    .txt_wrapper {
+      padding: 5%;
+    }
+    .txt_wrapper p {
+      font-size: 1rem;
     }
     .txt_wrapper img {
       width: 250px;

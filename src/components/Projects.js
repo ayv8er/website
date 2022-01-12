@@ -10,7 +10,8 @@ export default function Projects() {
   const projects = [
     {
       title: "Cryptocurrency Index",
-      description: "A live market index of various Cryptocurrencies",
+      description:
+        "A live market index of various Cryptocurrencies. A React application that manages two different sets of state using Redux; the main list which takes data via an Axios call from a CoinGecko API before setting it to state, and the other is a favorites list which manages a users selection from the main list. Dark mode is also set to state via a custom hook and local storage. A search input allows a user to filter the main list dynamically. The favorites list only appears after a user has set one item to the favorites list state. I plan on adding a login and register feature that gives a user the ability to use the favorites list feature, and persisting that data with a relational database.",
       gitHub: "https://github.com/ayv8er/cryptomarketinfo",
       deployed_site: "https://cryptomarketinfo.vercel.app/",
       card_image: cryptoImg,
@@ -25,7 +26,7 @@ export default function Projects() {
     {
       title: "Underdog Devs",
       description:
-        "a community of software engineers supporting aspiring developers who come from disadvantaged backgrounds or who are formerly incarcerated",
+        "We are a group of software engineers helping aspiring developers who are either formerly incarcerated or from an economically disadvantaged background.",
       gitHub: "https://github.com/Underdog-Devs-Labs-2021",
       deployed_site: "https://www.underdogdevs.org/",
       card_image: UnderdogDevsImg,
