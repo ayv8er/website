@@ -55,7 +55,7 @@
     border-bottom: 1px solid #66fcf1;
   }
 }
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) {
   .title h1 {
     font-size: 1.4rem;
   }
@@ -65,7 +65,7 @@
   .navLinks a {
     font-size: 1rem;
   }
-}
+} */
 @media screen and (min-width: 600px) {
   .title h1 {
     font-size: 1.8rem;
@@ -119,18 +119,13 @@
     line-height: 1;
   }
 }
-@media screen and (min-height: 375px) {
-  .title {
-    line-height: 1.2;
-  }
-}
 @media screen and (min-height: 595px) {
   .title {
-    line-height: 1.4;
+    line-height: 1;
   }
 }
 @media screen and (min-height: 768px) {
   .title {
-    line-height: 1.5;
+    line-height: 1.4;
   }
 }
