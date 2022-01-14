@@ -6,7 +6,7 @@ import Navhead from "./components/Navhead";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-function App() {
+const App = () => {
   return (
     <Container fluid="md">
       <Navhead />
@@ -19,6 +19,6 @@ function App() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default App;

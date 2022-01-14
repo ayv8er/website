@@ -1,11 +1,11 @@
-import React from "react";
-import Richard from "../assets/richard.png";
-import styled from "styled-components";
-import img from "../assets/low-poly-grid-haikei.svg";
+import { Container, Figure, Row, Col } from "react-bootstrap";
+import richard from "../assets/richard.png";
+// import img from "../assets/low-poly-grid-haikei.svg";
 
-export default function About() {
-  const userInfo = {
-    profile_pic: Richard,
+const About = () => {
+  const user = {
+    profile_pic: richard,
+    title: "Full Stack Developer",
     bio: "Hello and welcome to my website! I'm a Full Stack Web Developer comfortable with single page applications, responsive designs, RESTful APIs, new features implementation, maintenance and refactoring of existing code across various languages, frameworks, and databases. I have an ownership and growth mindset and love to work on teams or independently in a remote setting. I have a practical understanding in the following areas...",
     frontend:
       "React.js, Redux, Hooks, Context API, RESTful API Design, React Testing Library, Yum, Axios, JavaScript, HTML, CSS, JSX, Ant Design, Bootstrap.",
@@ -14,87 +14,27 @@ export default function About() {
   };
 
   return (
-    <StyledAbout>
-      <div className="navPadding"></div>
-      <div id="about">
-        <div className="txt_wrapper">
-          <img src={userInfo.profile_pic} alt="richard" />
-        </div>
-        <div className="txt_wrapper">
-          <p>{userInfo.bio}</p>
-          <br />
-          <p>Frontend: {userInfo.frontend}</p>
-          <br />
-          <p>Backend: {userInfo.backend}</p>
-        </div>
-      </div>
-    </StyledAbout>
+    <Container fluid="md">
+      <Row>
+        <Col>
+          <Figure>
+            <Figure.Image
+              width={200}
+              height={200}
+              alt="Richard Selfie"
+              src={richard}
+            />
+            <Figure.Caption>{user.title}</Figure.Caption>
+          </Figure>
+        </Col>
+        <Col>
+          {user.bio}
+          {user.frontend}
+          {user.backend}
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
-const StyledAbout = styled.div`
-  @media screen and (min-width: 1px) {
-    #about {
-      min-height: 80vh;
-      width: 100vw;
-      background-image: url(${img});
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-    }
-    .txt_wrapper {
-      padding: 10%;
-    }
-    .txt_wrapper img {
-      border: 5px solid #66fcf1;
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-    }
-    .txt_wrapper p {
-      font-size: 0.8rem;
-      color: var(--primary_color);
-      line-height: 2;
-      font-family: arial;
-    }
-  }
-  @media screen and (min-width: 375px) {
-    .txt_wrapper {
-      padding: 5%;
-    }
-    .txt_wrapper p {
-      font-size: 0.8rem;
-    }
-  }
-  @media screen and (min-width: 595px) {
-    .txt_wrapper {
-      padding: 5%;
-    }
-    .txt_wrapper p {
-      font-size: 1rem;
-    }
-    .txt_wrapper img {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    #about {
-      flex-direction: row;
-      align-content: center;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    .txt_wrapper p {
-      font-size: 1.4rem;
-      line-height: 2;
-    }
-  }
-  @media screen and (min-width: 1920px) {
-    .txt_wrapper p {
-      font-size: 1.8rem;
-      line-height: 2;
-    }
-  }
-`;
+export default About;
