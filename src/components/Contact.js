@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <StyledContact>
       <Container fluid>
+        <div className="row row-cols-auto justify-content-center"></div>
         <div className="row row-cols-auto justify-content-center">
           <div className="col">
             <Card className="text-center">
@@ -54,7 +55,17 @@ const Contact = () => {
 
 const StyledContact = styled.div`
   .row {
-    padding-top: 15%;
+    padding-top: 10%;
+  }
+  @media only screen and (max-width: 790px) {
+    .row {
+      padding-top: 20%;
+    }
+  }
+  @media only screen and (max-width: 395px) {
+    .row {
+      padding-top: 40%;
+    }
   }
 `;
 
