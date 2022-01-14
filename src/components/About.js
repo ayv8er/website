@@ -1,6 +1,6 @@
-import { Container, Figure, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
+import styled from "styled-components";
 import richard from "../assets/richard.png";
-// import img from "../assets/low-poly-grid-haikei.svg";
 
 const About = () => {
   const user = {
@@ -14,27 +14,68 @@ const About = () => {
   };
 
   return (
-    <Container fluid="md">
-      <Row>
-        <Col>
-          <Figure>
-            <Figure.Image
-              width={200}
-              height={200}
-              alt="Richard Selfie"
-              src={richard}
-            />
-            <Figure.Caption>{user.title}</Figure.Caption>
-          </Figure>
-        </Col>
-        <Col>
-          {user.bio}
-          {user.frontend}
-          {user.backend}
-        </Col>
-      </Row>
-    </Container>
+    <StyledAbout>
+      <Container fluid>
+        <div className="row">
+          <Col>
+            <div className="img-fluid">
+              <img src={richard} alt="Richard Selfie" />
+            </div>
+          </Col>
+          <Col xs={8}>
+            <div className="lead">
+              <p>{user.bio}</p>
+              <br />
+              <p>Front End: {user.frontend}</p>
+              <br />
+              <p>Back End: {user.backend}</p>
+            </div>
+          </Col>
+        </div>
+      </Container>
+    </StyledAbout>
   );
 };
+
+const StyledAbout = styled.div`
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+  }
+  .img-fluid img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+  }
+  .img-fluid {
+    display: flex;
+    justify-content: center;
+  }
+  .lead {
+    color: white;
+    width: 100%;
+    padding: 10%;
+  }
+  @media only screen and (max-width: 1295px) {
+    .img-fluid img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  @media only screen and (max-width: 1145px) {
+    .img-fluid img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @media only screen and (max-width: 996px) {
+    .img-fluid img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+`;
 
 export default About;

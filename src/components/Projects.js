@@ -1,12 +1,12 @@
-import React from "react";
+import { Container } from "react-bootstrap";
+import styled from "styled-components";
 import Project from "./Project";
-import "./projects.css";
 
 import cryptoImg from "../assets/crypto.jpg";
 import UnderdogDevsImg from "../assets/UnderdogDevs.JPG";
 import nasaImg from "../assets/nasa.jpg";
 
-export default function Projects() {
+const Projects = () => {
   const projects = [
     {
       title: "Cryptocurrency Index",
@@ -34,14 +34,25 @@ export default function Projects() {
   ];
 
   return (
-    <div id="Projects">
-      <div className="navPadding"></div>
-
-      <div className="projects_wrapper">
-        {projects.map((project, index) => {
-          return <Project project={project} key={index} />;
-        })}
-      </div>
-    </div>
+    <StyledProjects>
+      <Container fluid>
+        <div className="row">
+          {projects.map((project, index) => {
+            return <Project project={project} key={index} />;
+          })}
+        </div>
+      </Container>
+    </StyledProjects>
   );
-}
+};
+
+const StyledProjects = styled.div`
+  .row {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    border: 1px solid red;
+  }
+`;
+
+export default Projects;

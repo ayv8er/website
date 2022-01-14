@@ -1,54 +1,24 @@
-import "./project.css";
-import React, { useState } from "react";
+import { Col, Card, Button } from "react-bootstrap";
 
-export default function Project(props) {
-  const [isActive, setIsActive] = useState(false);
+const Project = (props) => {
   const { gitHub, title, description, deployed_site, card_image } =
     props.project;
 
-  const handleClick = () => {
-    setIsActive(true);
-  };
-
-  const handleExit = (e) => {
-    setIsActive(false);
-    e.stopPropagation();
-  };
-
   return (
-    <div
-      className={isActive ? "active_project" : "project"}
-      onClick={handleClick}
-    >
-      <div className="exit_icon" onClick={handleExit}>
-        <i className="lni lni-close"></i>
-      </div>
-
-      <div
-        className="background_img"
-        style={{ backgroundImage: "url(" + card_image + ")" }}
-      >
-        <h3 className="img_title">{title}</h3>
-      </div>
-
-      <div className="title_container">
-        <h3 className="non_img_title">{title}</h3>
-        <div className="icon_container">
-          <div className="icon_wrap">
-            <a href={gitHub}>
-              <i className="lni lni-github-original"></i>
-            </a>
-          </div>
-          <div className="icon_wrap">
-            <a href={deployed_site}>
-              <i className="lni lni-website"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="proj_texts">
-        <p className="description">{description}</p>
-      </div>
-    </div>
+    <Col>
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    </Col>
   );
-}
+};
+
+export default Project;
