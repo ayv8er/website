@@ -16,12 +16,12 @@ const About = () => {
   return (
     <StyledAbout>
       <Container fluid="sm">
-        <div className="row">
-          <Col>
+        <div className="row row-cols-auto justify-content-center">
+          <div className="col">
             <div className="img-fluid">
               <img src={richard} alt="Richard Selfie" />
             </div>
-          </Col>
+          </div>
           <Col xs={8}>
             <div className="lead">
               <p>{user.bio}</p>
@@ -45,8 +45,8 @@ const StyledAbout = styled.div`
     padding-top: 5%;
   }
   .img-fluid img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
   }
   .img-fluid {
@@ -58,22 +58,13 @@ const StyledAbout = styled.div`
     width: 100%;
     padding: 10%;
   }
-  @media only screen and (max-width: 1295px) {
+  @media only screen and (max-width: 1201px) {
     .img-fluid img {
-      width: 350px;
-      height: 350px;
+      width: 200px;
+      height: 200px;
     }
-  }
-  @media only screen and (max-width: 1145px) {
-    .img-fluid img {
-      width: 300px;
-      height: 300px;
-    }
-  }
-  @media only screen and (max-width: 996px) {
-    .img-fluid img {
-      width: 250px;
-      height: 250px;
+    .lead {
+      font-size: 1rem;
     }
   }
 `;

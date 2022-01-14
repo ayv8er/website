@@ -48,7 +48,7 @@ const Projects = () => {
 
 const StyledProjects = styled.div`
   .row {
-    padding-top: 15%;
+    padding-top: 10%;
   }
 `;
 

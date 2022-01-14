@@ -12,38 +12,40 @@ const Contact = () => {
   return (
     <StyledContact>
       <Container fluid>
-        <div className="contact_container">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>Contact Richard</Card.Title>
-              <Card.Text>
-                via LinkedIn, GitHub, or email/phone from Resume
-              </Card.Text>
-              <ButtonGroup size="lg" className="mb-2">
-                <Button
-                  className="contact_button"
-                  href={user.linkedIn}
-                  variant="outline-dark"
-                >
-                  <i className="lni lni-linkedin-original"></i>
-                </Button>
-                <Button
-                  className="contact_button"
-                  href={user.gitHub}
-                  variant="outline-dark"
-                >
-                  <i className="lni lni-github-original"></i>
-                </Button>
-                <Button
-                  className="contact_button"
-                  href={user.resume}
-                  variant="outline-dark"
-                >
-                  Resume
-                </Button>
-              </ButtonGroup>
-            </Card.Body>
-          </Card>
+        <div className="row row-cols-auto justify-content-center">
+          <div className="col">
+            <Card className="text-center">
+              <Card.Body>
+                <Card.Title>Contact Richard</Card.Title>
+                <Card.Text>
+                  via LinkedIn, GitHub, or email/phone from Resume
+                </Card.Text>
+                <ButtonGroup size="lg" className="mb-2">
+                  <Button
+                    className="contact_button"
+                    href={user.linkedIn}
+                    variant="secondary"
+                  >
+                    <i className="lni lni-linkedin-original"></i>
+                  </Button>
+                  <Button
+                    className="contact_button"
+                    href={user.gitHub}
+                    variant="secondary"
+                  >
+                    <i className="lni lni-github-original"></i>
+                  </Button>
+                  <Button
+                    className="contact_button"
+                    href={user.resume}
+                    variant="secondary"
+                  >
+                    Resume
+                  </Button>
+                </ButtonGroup>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
       </Container>
     </StyledContact>
@@ -51,15 +53,8 @@ const Contact = () => {
 };
 
 const StyledContact = styled.div`
-  .contact_container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10%;
-  }
-  .contact_button {
-    margin: 5%;
+  .row {
+    padding-top: 15%;
   }
 `;
 
