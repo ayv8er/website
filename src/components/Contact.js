@@ -1,53 +1,61 @@
-import React from "react";
+import { Container, Card, Button, ButtonGroup } from "react-bootstrap";
 import styled from "styled-components";
-import img from "../assets/low-poly-grid-haikei.svg";
 
-export default function Contact() {
+const Contact = () => {
   const user = {
+    linkedIn: "https://www.linkedin.com/in/rjo2/",
+    gitHub: "https://github.com/ayv8er",
     resume:
       "https://drive.google.com/file/d/1UI26-K1z6RwwQ_Wcgjvbhhc-IMzd-GQO/view?usp=sharing",
   };
 
   return (
     <StyledContact>
-      <div className="navPadding"></div>
-      <div id="contacts">
-        <div id="resume">
-          {user.resume && (
-            <a href={user.resume} download>
-              Link to Resume
-            </a>
-          )}
+      <Container fluid>
+        <div className="row row-cols-auto justify-content-center">
+          <div className="col">
+            <Card className="text-center">
+              <Card.Body>
+                <Card.Title>Contact Richard</Card.Title>
+                <Card.Text>
+                  via LinkedIn, GitHub, or email/phone from Resume
+                </Card.Text>
+                <ButtonGroup size="lg" className="mb-2">
+                  <Button
+                    className="contact_button"
+                    href={user.linkedIn}
+                    variant="secondary"
+                  >
+                    <i className="lni lni-linkedin-original"></i>
+                  </Button>
+                  <Button
+                    className="contact_button"
+                    href={user.gitHub}
+                    variant="secondary"
+                  >
+                    <i className="lni lni-github-original"></i>
+                  </Button>
+                  <Button
+                    className="contact_button"
+                    href={user.resume}
+                    variant="secondary"
+                  >
+                    Resume
+                  </Button>
+                </ButtonGroup>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
-      </div>
+      </Container>
     </StyledContact>
   );
-}
+};
 
 const StyledContact = styled.div`
-  #contacts {
-    min-height: 75vh;
-    width: 100vw;
-    background-image: url(${img});
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #resume {
-    padding: 3%;
-    border: 5px solid var(--secondary_color);
-    justify-self: center;
-    align-self: center;
-    cursor: pointer;
-    font-family: arial;
-  }
-  #resume a {
-    color: var(--primary_color);
-    font-size: 2rem;
-  }
-  #resume:hover {
-    box-shadow: 10px 10px 20px var(--secondary_color);
+  .row {
+    padding-top: 15%;
   }
 `;
+
+export default Contact;

@@ -1,54 +1,66 @@
-import "./project.css";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Card, Button, ButtonGroup, Modal } from "react-bootstrap";
+import styled from "styled-components";
 
-export default function Project(props) {
-  const [isActive, setIsActive] = useState(false);
+const Project = (props) => {
   const { gitHub, title, description, deployed_site, card_image } =
     props.project;
 
-  const handleClick = () => {
-    setIsActive(true);
-  };
-
-  const handleExit = (e) => {
-    setIsActive(false);
-    e.stopPropagation();
-  };
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
-    <div
-      className={isActive ? "active_project" : "project"}
-      onClick={handleClick}
-    >
-      <div className="exit_icon" onClick={handleExit}>
-        <i className="lni lni-close"></i>
+    <StyledProject>
+      <div className="col">
+        <Card border="info" style={{ width: "15rem" }}>
+          <Card.Img variant="top" height={200} src={card_image} />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <ButtonGroup size="sm" className="mb-2">
+              <Button
+                className="contact_button"
+                variant="secondary"
+                href={deployed_site}
+              >
+                Website
+              </Button>
+              <Button
+                className="contact_button"
+                variant="secondary"
+                href={gitHub}
+              >
+                GitHub
+              </Button>
+              <Button
+                onClick={handleShow}
+                className="contact_button"
+                variant="secondary"
+              >
+                Description
+              </Button>
+            </ButtonGroup>
+          </Card.Body>
+        </Card>
       </div>
-
-      <div
-        className="background_img"
-        style={{ backgroundImage: "url(" + card_image + ")" }}
-      >
-        <h3 className="img_title">{title}</h3>
-      </div>
-
-      <div className="title_container">
-        <h3 className="non_img_title">{title}</h3>
-        <div className="icon_container">
-          <div className="icon_wrap">
-            <a href={gitHub}>
-              <i className="lni lni-github-original"></i>
-            </a>
-          </div>
-          <div className="icon_wrap">
-            <a href={deployed_site}>
-              <i className="lni lni-website"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="proj_texts">
-        <p className="description">{description}</p>
-      </div>
-    </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{description}</Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
+    </StyledProject>
   );
-}
+};
+
+const StyledProject = styled.div`
+  .col {
+    margin-top: 20%;
+    text-align: center;
+  }
+  .contact_button {
+  }
+`;
+
+export default Project;
