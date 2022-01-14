@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <StyledAbout>
-      <Container fluid>
+      <Container fluid="sm">
         <div className="row">
           <Col>
             <div className="img-fluid">

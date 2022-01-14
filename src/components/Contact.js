@@ -19,28 +19,29 @@ const Contact = () => {
               <Card.Text>
                 via LinkedIn, GitHub, or email/phone from Resume
               </Card.Text>
-              <ButtonGroup size="lg" className="mb-2"></ButtonGroup>
-              <Button
-                className="contact_button"
-                href={user.linkedIn}
-                variant="outline-dark"
-              >
-                <i className="lni lni-linkedin-original"></i>
-              </Button>
-              <Button
-                className="contact_button"
-                href={user.gitHub}
-                variant="outline-dark"
-              >
-                <i className="lni lni-github-original"></i>
-              </Button>
-              <Button
-                className="contact_button"
-                href={user.resume}
-                variant="outline-dark"
-              >
-                Resume
-              </Button>
+              <ButtonGroup size="lg" className="mb-2">
+                <Button
+                  className="contact_button"
+                  href={user.linkedIn}
+                  variant="outline-dark"
+                >
+                  <i className="lni lni-linkedin-original"></i>
+                </Button>
+                <Button
+                  className="contact_button"
+                  href={user.gitHub}
+                  variant="outline-dark"
+                >
+                  <i className="lni lni-github-original"></i>
+                </Button>
+                <Button
+                  className="contact_button"
+                  href={user.resume}
+                  variant="outline-dark"
+                >
+                  Resume
+                </Button>
+              </ButtonGroup>
             </Card.Body>
           </Card>
         </div>

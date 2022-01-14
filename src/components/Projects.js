@@ -4,7 +4,7 @@ import Project from "./Project";
 
 import cryptoImg from "../assets/crypto.jpg";
 import UnderdogDevsImg from "../assets/UnderdogDevs.JPG";
-import nasaImg from "../assets/nasa.jpg";
+import nasaImg from "../assets/nasa.png";
 
 const Projects = () => {
   const projects = [
@@ -35,8 +35,8 @@ const Projects = () => {
 
   return (
     <StyledProjects>
-      <Container fluid>
-        <div className="row">
+      <Container fluid="sm">
+        <div className="row row-cols-auto justify-content-center">
           {projects.map((project, index) => {
             return <Project project={project} key={index} />;
           })}
@@ -48,10 +48,7 @@ const Projects = () => {
 
 const StyledProjects = styled.div`
   .row {
-    display: flex;
-    justify-content: center;
-    padding-top: 10%;
-    border: 1px solid red;
+    padding-top: 15%;
   }
 `;
 

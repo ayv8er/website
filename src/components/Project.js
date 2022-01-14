@@ -1,24 +1,47 @@
-import { Col, Card, Button } from "react-bootstrap";
+import { Card, Button, ButtonGroup } from "react-bootstrap";
+import styled from "styled-components";
 
 const Project = (props) => {
   const { gitHub, title, description, deployed_site, card_image } =
     props.project;
 
   return (
-    <Col>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-    </Col>
+    <StyledProject>
+      <div className="col">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" height={240} src={card_image} />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <ButtonGroup size="sm" className="mb-2">
+              <Button
+                className="contact_button"
+                variant="outline-dark"
+                href={deployed_site}
+              >
+                Website
+              </Button>
+              <Button
+                className="contact_button"
+                variant="outline-dark"
+                href={gitHub}
+              >
+                GitHub
+              </Button>
+              <Button className="contact_button" variant="outline-dark">
+                Description
+              </Button>
+            </ButtonGroup>
+          </Card.Body>
+        </Card>
+      </div>
+    </StyledProject>
   );
 };
+
+const StyledProject = styled.div`
+  .col {
+    margin: 10%;
+  }
+`;
 
 export default Project;
