@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import "./App.css";
+import Container from "react-bootstrap/Container";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Navhead from "./components/Navhead";
@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
+    <Container fluid="md">
       <Navhead />
       <Routes>
         <Route path="/" element={<Navigate replace to="/about" />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </div>
+    </Container>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./navhead.css";
+import { Nav, Navbar, Container } from "react-bootstrap";
 
 const Navhead = () => {
   const user = {
@@ -9,46 +9,25 @@ const Navhead = () => {
   };
 
   return (
-    <div id="navHead">
-      <div className="title">
-        <h1>{user.name}</h1>
-        <h2>{user.title}</h2>
-      </div>
-
-      <div className="navLinks">
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              border: isActive ? "1px solid #66fcf1" : "",
-            };
-          }}
-          to="/about"
-        >
-          About
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              border: isActive ? "1px solid #66fcf1" : "",
-            };
-          }}
-          to="/projects"
-        >
-          Projects
-        </NavLink>
-
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              border: isActive ? "1px solid #66fcf1" : "",
-            };
-          }}
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-      </div>
-    </div>
+    <Navbar collapseOnSelect expand="md" fixed="top" bg="dark" variant="dark">
+      <Container fluid="md">
+        <Navbar.Brand href="/">{user.name}</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/about">
+              About
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/projects">
+              Projects
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/contact">
+              Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
