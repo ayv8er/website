@@ -67,6 +67,11 @@ const StyledAbout = styled.div`
       font-size: 1rem;
     }
   }
+  @media only screen and (max-width: 790px) {
+    .lead {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export default About;

@@ -5,6 +5,7 @@ import Project from "./Project";
 import cryptoImg from "../assets/crypto.jpg";
 import UnderdogDevsImg from "../assets/UnderdogDevs.JPG";
 import nasaImg from "../assets/nasa.png";
+import quoteImg from "../assets/quote.jpg";
 
 const Projects = () => {
   const projects = [
@@ -31,6 +32,14 @@ const Projects = () => {
       gitHub: "https://github.com/Underdog-Devs-Labs-2021",
       deployed_site: "https://www.underdogdevs.org/",
       card_image: UnderdogDevsImg,
+    },
+    {
+      title: "Quote Generator",
+      description:
+        'A vanilla JavaScript App that consumes and displays a 3rd party API (Type.fit) into a container. Another random quote can be drawn from the API by clicking on "New Quote." A desired quote can be tweeted by clicking on the Twitter logo.',
+      gitHub: "https://github.com/ayv8er/QuoteGenerator",
+      deployed_site: "https://quote-generator-khaki.vercel.app/",
+      card_image: quoteImg,
     },
   ];
 
