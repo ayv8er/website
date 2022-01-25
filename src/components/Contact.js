@@ -13,7 +13,7 @@ const Contact = () => {
     linkedIn: "https://www.linkedin.com/in/rjo2/",
     gitHub: "https://github.com/ayv8er",
     resume:
-      "https://drive.google.com/file/d/1UI26-K1z6RwwQ_Wcgjvbhhc-IMzd-GQO/view?usp=sharing",
+      "https://drive.google.com/file/d/1x4ue55nsDxrvl_omtK9hxaPQGdLdXgLN/view?usp=sharing",
   };
 
   return (
