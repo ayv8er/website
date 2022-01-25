@@ -1,4 +1,11 @@
-import { Container, Card, Button, ButtonGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  ButtonGroup,
+} from "react-bootstrap";
 import styled from "styled-components";
 
 const Contact = () => {
@@ -12,8 +19,8 @@ const Contact = () => {
   return (
     <StyledContact>
       <Container fluid>
-        <div className="row row-cols-auto justify-content-center">
-          <div className="col">
+        <Row xxl xl lg md sm xs className="justify-content-center">
+          <Col xxl={4} xl={5} lg={6} md={6} sm={8} xs={10}>
             <Card className="text-center">
               <Card.Body>
                 <Card.Title>Contact Richard</Card.Title>
@@ -45,16 +52,16 @@ const Contact = () => {
                 </ButtonGroup>
               </Card.Body>
             </Card>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
     </StyledContact>
   );
 };
 
 const StyledContact = styled.div`
-  .row {
-    padding-top: 15%;
+  .justify-content-center {
+    padding-top: 20%;
   }
 `;
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Card, Button, ButtonGroup, Modal } from "react-bootstrap";
-import styled from "styled-components";
+import { Col, Card, Button, ButtonGroup, Modal } from "react-bootstrap";
 
 const Project = (props) => {
   const { gitHub, title, description, deployed_site, card_image } =
@@ -11,12 +10,12 @@ const Project = (props) => {
   const handleShow = () => setShow(true);
 
   return (
-    <StyledProject>
-      <div className="col">
-        <Card border="info" style={{ width: "15rem" }}>
+    <>
+      <Col xxl={3} xl={3} lg={4} md={5} sm={6} xs={12}>
+        <Card style={{ marginTop: "5%", width: "16rem" }}>
           <Card.Img variant="top" height={200} src={card_image} />
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+            <Card.Title style={{ textAlign: "center" }}>{title}</Card.Title>
             <ButtonGroup size="sm" className="mb-2">
               <Button
                 className="contact_button"
@@ -42,25 +41,16 @@ const Project = (props) => {
             </ButtonGroup>
           </Card.Body>
         </Card>
-      </div>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{description}</Modal.Body>
-        <Modal.Footer></Modal.Footer>
-      </Modal>
-    </StyledProject>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>{title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{description}</Modal.Body>
+          <Modal.Footer></Modal.Footer>
+        </Modal>{" "}
+      </Col>
+    </>
   );
 };
-
-const StyledProject = styled.div`
-  .col {
-    margin-top: 20%;
-    text-align: center;
-  }
-  .contact_button {
-  }
-`;
 
 export default Project;
