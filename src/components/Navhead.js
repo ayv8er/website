@@ -9,7 +9,7 @@ const Navhead = () => {
 
   return (
     <StyledNavBar>
-      <Navbar fixed="top" expand="md" bg="dark" variant="dark">
+      <Navbar sticky="top" expand="md" bg="dark" variant="dark">
         <Container fluid="md">
           <Navbar.Brand className="mb-0 h1" href="/">
             {user.name}

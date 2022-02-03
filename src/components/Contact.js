@@ -20,7 +20,7 @@ const Contact = () => {
     <StyledContact>
       <Container fluid>
         <Row xxl xl lg md sm xs className="justify-content-center">
-          <Col xxl={4} xl={5} lg={6} md={6} sm={8} xs={10}>
+          <Col xxl={4} xl={5} lg={6} md={8} sm={10} xs={12}>
             <Card className="text-center">
               <Card.Body>
                 <Card.Title>Contact Richard</Card.Title>
@@ -61,7 +61,7 @@ const Contact = () => {
 
 const StyledContact = styled.div`
   .justify-content-center {
-    padding-top: 20%;
+    padding-top: 10%;
   }
 `;
 

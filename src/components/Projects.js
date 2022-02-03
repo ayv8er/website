@@ -67,8 +67,13 @@ const Projects = () => {
 
 const StyledProjects = styled.div`
   .justify-content-center {
-    padding-top: 10%;
+    padding-top: 5%;
     padding-left: 6%;
+  }
+  @media only screen and (max-width: 570px) {
+    .justify-content-center {
+      padding-left: 12%;
+    }
   }
 `;
 

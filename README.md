@@ -1,4 +1,4 @@
-# About Richard J Oh
+# Richard J Oh Portfolio Website
 
 ## [Visit this live site](https)
 
