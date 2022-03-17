@@ -9,7 +9,7 @@ const About = () => {
     intro:
       "Hello and welcome to my website! I'm a Full Stack Web Developer with an emphasis on Front End Development. I have experience scripting in JavaScript and Python, and I love building responsive ReactJS Single Page Applications. I get a kick out of creating RESTful endpoints with NodeJS and Express, in order to give front end applications a server to play with. Got features or wireframes? I want to implement them! I’m eager to learn new languages, frameworks, and databases. I have an ownership and growth mindset and love to work on teams or independently in a remote setting. I have a practical understanding in the following areas…",
     frontend:
-      "React.js, Redux, Hooks, Context API, RESTful API Design, React Testing Library, Yup, Axios, Formik, JavaScript, HTML, CSS, JSX, Ant Design, Bootstrap.",
+      "React.js, Redux, Hooks, Context API, RESTful API Design, React Testing Library, Yup, Axios, Formik, JavaScript, TypeScript, HTML, CSS, JSX, Ant Design, Bootstrap.",
     backend:
       "Node.js, Express, SQL, SQLite3, PostgreSQL, Python, Jest, Git CLI, GitHub, VS Code, Heroku, Netlify, Vercel, Postman.",
     outro:
