@@ -1,56 +1,41 @@
-import { useState } from "react";
-import { Col, Card, Button, ButtonGroup, Modal } from "react-bootstrap";
+import styled from "styled-components";
+import website from "../assets/website.svg";
+import github from "../assets/github-original-sm.svg";
 
-const Project = (props) => {
-  const { gitHub, title, description, deployed_site, card_image } =
-    props.project;
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const Project = ({ project }) => {
   return (
-    <>
-      <Col xxl={3} xl={3} lg={4} md={5} sm={6} xs={12}>
-        <Card style={{ marginTop: "5%", width: "16rem" }}>
-          <Card.Img variant="top" height={200} src={card_image} />
-          <Card.Body>
-            <Card.Title style={{ textAlign: "center" }}>{title}</Card.Title>
-            <ButtonGroup size="sm" className="mb-2">
-              <Button
-                className="contact_button"
-                variant="secondary"
-                href={deployed_site}
-              >
-                Website
-              </Button>
-              <Button
-                className="contact_button"
-                variant="secondary"
-                href={gitHub}
-              >
-                GitHub
-              </Button>
-              <Button
-                onClick={handleShow}
-                className="contact_button"
-                variant="secondary"
-              >
-                Description
-              </Button>
-            </ButtonGroup>
-          </Card.Body>
-        </Card>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>{title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{description}</Modal.Body>
-          <Modal.Footer></Modal.Footer>
-        </Modal>{" "}
-      </Col>
-    </>
+    <StyledProject className="d-flex flex-column justify-content-between m-4 p-2 col-6 col-sm-12 border rounded">
+      <div className="d-flex justify-content-between align-items-center">
+        <h6 className="w-50">{project.title}</h6>
+        <div className="d-flex justify-content-end w-50">
+          <a className="me-3" href={project.gitHub}>
+            <img src={github} alt="repo" />
+          </a>
+          <a href={project.deployed_site}>
+            <img src={website} alt="site" />
+          </a>
+        </div>
+      </div>
+      <div className="">
+        <p>{project.description}</p>
+      </div>
+      <div className="d-flex">
+        {project.technologies.map((item) => (
+          <div className="px-1 ">{item}</div>
+        ))}
+      </div>
+    </StyledProject>
   );
 };
 
 export default Project;
+
+const StyledProject = styled.div`
+  :hover {
+    color: #ced4da;
+  }
+  font-family: Arvo;
+  width: 280px;
+  height: 300px;
+  font-size: 0.8rem;
+`;

@@ -1,67 +1,45 @@
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  ButtonGroup,
-} from "react-bootstrap";
 import styled from "styled-components";
+import { contact } from "../data";
 
 const Contact = () => {
-  const user = {
-    linkedIn: "https://www.linkedin.com/in/rjo2/",
-    gitHub: "https://github.com/ayv8er",
-    resume:
-      "https://drive.google.com/file/d/19sJJmQZFAZ7oxByEPkijBfKvarIQ_g3v/view?usp=sharing",
-  };
-
   return (
-    <StyledContact>
-      <Container fluid>
-        <Row xxl xl lg md sm xs className="justify-content-center">
-          <Col xxl={4} xl={5} lg={6} md={8} sm={10} xs={12}>
-            <Card className="text-center">
-              <Card.Body>
-                <Card.Title>Contact Richard</Card.Title>
-                <Card.Text>
-                  via LinkedIn, GitHub, or email/phone from Resume
-                </Card.Text>
-                <ButtonGroup size="lg" className="mb-2">
-                  <Button
-                    className="contact_button"
-                    href={user.linkedIn}
-                    variant="secondary"
-                  >
-                    <i className="lni lni-linkedin-original"></i>
-                  </Button>
-                  <Button
-                    className="contact_button"
-                    href={user.gitHub}
-                    variant="secondary"
-                  >
-                    <i className="lni lni-github-original"></i>
-                  </Button>
-                  <Button
-                    className="contact_button"
-                    href={user.resume}
-                    variant="secondary"
-                  >
-                    Resume
-                  </Button>
-                </ButtonGroup>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+    <StyledContact className="d-flex justify-content-center align-items-evenly pb-5">
+      <div className="d-flex flex-column align-items-center w-75">
+        <h3 className="mt-5">Let's Build!</h3>
+        <div className="d-flex justify-content-around flex-wrap w-100">
+          {contact.map((item) => (
+            <div
+              key={item.name}
+              className="col-6 col-sm-6 col-md-6 d-flex justify-content-center align-items-center mt-5"
+            >
+              <a href={item.link}>
+                <img src={item.icon} alt={item.name} />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
     </StyledContact>
   );
 };
 
 const StyledContact = styled.div`
-  .justify-content-center {
-    padding-top: 10%;
+  h2 {
+    color: #ced4da;
+  }
+  a:hover {
+    width: 69px;
+    height: 69px;
+  }
+  font-family: Arvo;
+  font-size: 1.1rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.25);
+  min-height: 90vh;
+  height: 90%;
+  h1 {
+    color: #ced4da;
   }
 `;
 
