@@ -1,7 +1,7 @@
 import { Carousel } from "react-bootstrap";
-import monsterjam from "../assets/monsterjam.png";
+import monsterjam from "../assets/monsterjam.jpg";
 import n24512 from "../assets/n24512.png";
-import family from "../assets/family.png";
+import family from "../assets/family.jpg";
 import styled from "styled-components";
 
 const PhotoCarousel = () => {
