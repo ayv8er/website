@@ -12,7 +12,7 @@ export const contact = [
   {
     name: "resume",
     icon: resume,
-    link: "https://drive.google.com/file/d/1hlnrrxr4JLI24sLyqek4FOPYPfDgbQRK/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1WDMjniNGum1BacTQXCQb8mrog6yZQQZR/view?usp=sharing",
   },
   {
     name: "linkedin",
