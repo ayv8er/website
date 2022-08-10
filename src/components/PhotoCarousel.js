@@ -1,7 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import monsterjam from "../assets/monsterjam.jpg";
 import n24512 from "../assets/n24512.png";
-import family from "../assets/family.jpg";
 import styled from "styled-components";
 
 const PhotoCarousel = () => {
@@ -9,13 +8,15 @@ const PhotoCarousel = () => {
     <StyledImg>
       <Carousel fade className="h-50 w-100 overflow-hidden rounded-pill">
         <Carousel.Item>
-          <img className="w-100" src={monsterjam} alt="Selfie" />
+          <img
+            loading
+            className="w-100 rounded-pill"
+            src={monsterjam}
+            alt="Selfie"
+          />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="w-100" src={n24512} alt="Flying" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="w-100" src={family} alt="Family" />
+          <img className="w-100 rounded-pill" src={n24512} alt="Flying" />
         </Carousel.Item>
       </Carousel>
     </StyledImg>

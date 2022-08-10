@@ -59,7 +59,7 @@ export const projects = [
     title: "Shared List",
     description:
       "A single page web app to help me and my partner organize groceries, menu items and chore lists without wasting paper. Built with NextJS, MongoDB, and Bootstrap.",
-    gitHub: "https://github.com/ayv8er/cryptomarketinfo",
+    gitHub: "https://github.com/ayv8er/sharelist",
     deployed_site: "https://sharelist-eta.vercel.app/",
     technologies: ["NextJS", "ReactJS", "Bootstrap", "MongoDB"],
   },
