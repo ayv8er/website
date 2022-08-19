@@ -18,7 +18,7 @@ const Description = ({ toDisplay }) => {
               online reputation management firm
             </a>{" "}
             to a Series B funded
-            <a href="https://magic.link/"> crypto start-up</a>. {user.intro2}
+            <a href="https://magic.link/"> web3 company</a>. {user.intro2}
           </p>
         </div>
       )}

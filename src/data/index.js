@@ -7,12 +7,12 @@ export const contact = [
   {
     name: "email",
     icon: email,
-    link: "mailto:n24512@protonmail.com",
+    link: "mailto:n24512@proton.me",
   },
   {
     name: "resume",
     icon: resume,
-    link: "https://drive.google.com/file/d/1WDMjniNGum1BacTQXCQb8mrog6yZQQZR/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1V7_Nv06APwu3Yod8AmpDzzzIFs9tMNod/view?usp=sharing",
   },
   {
     name: "linkedin",
